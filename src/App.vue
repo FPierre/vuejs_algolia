@@ -5,6 +5,8 @@
 </template>
 
 <script>
+var algoliasearch = require('algoliasearch')
+
 export default {
   data () {
     return {
@@ -14,6 +16,14 @@ export default {
       // its initial state.
       msg: 'Hello Vue!'
     }
+  },
+  created: () => {
+    var client = algoliasearch('6DLEN782G1', '6ca42b1a471f2cc5def1aa1fedd10257')
+    var index = client.initIndex('dev_knowledges')
+
+    index.search('git', function searchDone(err, content) {
+      console.log(err, content);
+    })
   }
 }
 </script>

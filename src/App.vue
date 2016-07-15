@@ -9,8 +9,8 @@
 </template>
 
 <script>
-var algoliasearch = require('algoliasearch')
-let instantsearch = require('instantsearch.js')
+// var algoliasearch = require('algoliasearch')
+// let instantsearch = require('instantsearch.js')
 
 export default {
   data () {
@@ -28,7 +28,7 @@ export default {
     })
     */
 
-    
+    /* 
     let search = instantsearch({
       appId: '6DLEN782G1',
       apiKey: '6ca42b1a471f2cc5def1aa1fedd10257',
@@ -52,6 +52,7 @@ export default {
     )
 
     search.start()
+    */
   }
 }
 </script>
